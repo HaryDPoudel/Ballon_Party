@@ -1,0 +1,81 @@
+﻿@page "/"
+
+
+
+<PageTitle>Home</PageTitle>
+
+<HeroSection/>
+
+<div class="theme-intro">
+    <div class="container text-center">
+        <h2 class="mb-3">
+            Choose a Theme Your Child Will Love 🎈
+        </h2>
+        <p class="text-muted mb-0">
+            From popular themes to custom ideas, we create party setups that make kids smile.
+        </p>
+    </div>
+</div>
+
+
+
+<div class="container py-5">
+    <div class="row g-4">
+        <div class="col-12 col-md-4" >
+            <ThemeCard Title="Cute Bear Birthday" 
+                       Subtitle="1st – 5th Birthday, Baby Shower"
+                       ImageUrl="images/bear.jpg"
+                       OnClick="@(()=>OnThemeClick("Bear"))" />
+        </div>
+        <!-- Dinosaur Theme -->
+        <div class="col-12 col-md-4">
+            <ThemeCard Title="Roaring Dinosaur Adventure" 
+                       Subtitle="Kids Birthday (6–10)" 
+                       ImageUrl="images/dinosaur.jpg"
+                       OnClick="@(()=>OnThemeClick("Dinosaur"))" />
+        </div>
+
+        <!-- Pretty in Pink Theme -->
+        <div class="col-12 col-md-4">
+            <ThemeCard Title="Pretty in Pink Bow Party" 
+                       Subtitle="Birthday (Girls), Baby Shower" 
+                       ImageUrl="images/pink.jpg"
+                       OnClick="@(()=>OnThemeClick("PinkBow"))" />
+        </div>
+
+        <!-- Sports & Racing Theme -->
+        <div class="col-12 col-md-4">
+            <ThemeCard Title="Sports & Racing Party"
+                       Subtitle="From football to race cars, we’ll create an exciting, sporty birthday setup your child will love."
+                       ImageUrl="images/fun-game.jpg"
+                       OnClick="@(()=>OnThemeClick("SportsRacing"))" />
+        </div>
+
+        <!-- Colorful Party Magic -->
+        <div class="col-12 col-md-4">
+            <ThemeCard Title="Colorful Party Magic"
+                       Subtitle="Bright and playful balloon setups for birthdays joyous moments."
+                       ImageUrl="images/gold-blac.jpg"
+                       OnClick="@(()=>OnThemeClick("Colorful"))" />
+        </div>
+        <div class="col-12 col-md-4">
+            <ThemeCard Title="Something Your Child Will Love"
+                       Subtitle="Every child is unique. Tell us what your child loves — we’ll adapt the theme, colors, and setup just for them."
+                       ImageUrl="images/custom-party.png"
+                       OnClick="@(()=>OnThemeClick("Custom"))" />
+        </div>
+
+    </div>
+</div>
+
+<ContactForm />
+
+<Footer />
+
+@code {
+    void OnThemeClick(string theme)
+    {
+        // For now, can trigger modal, redirect, or just log
+        Console.WriteLine($"Theme clicked: {theme}");
+    }
+}

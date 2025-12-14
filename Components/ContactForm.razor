@@ -1,0 +1,76 @@
+﻿<section class="contact-section">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="contact-card">
+                    <h2 class="contact-title text-center mb-2">
+                        Let’s Make Your Child Smile 🎈
+                    </h2>
+
+                    <p class="contact-subtitle text-center mb-4">
+                        Tell us a little about your child’s party. We’ll take care of the rest.
+                    </p>
+
+                    <EditForm Model="@form" OnValidSubmit="HandleSubmit">
+                        <div class="mb-3">
+                            <label class="form-label">Parent’s Name</label>
+                            <InputText class="form-control" @bind-Value="form.ParentName" placeholder="Your name" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Phone / WhatsApp</label>
+                            <InputText class="form-control" @bind-Value="form.Phone" placeholder="Your phone number" />
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label class="form-label">Child’s Age</label>
+                                <InputText class="form-control" @bind-Value="form.ChildAge" placeholder="e.g. 7" />
+                            </div>
+
+                            <div class="col-6 mb-3">
+                                <label class="form-label">Party Date</label>
+                                <InputDate class="form-control" @bind-Value="form.PartyDate" />
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">What are you looking for?</label>
+                            <InputTextArea class="form-control"
+                                           rows="3"
+                                           @bind-Value="form.Message"
+                                           placeholder="Dinosaur, pink theme, sports, or something custom..." />
+                        </div>
+
+                        <button class="btn btn-primary w-100 contact-cta">
+                            I’m Interested
+                        </button>
+                    </EditForm>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@code {
+    ContactFormModel form = new();
+
+    void HandleSubmit()
+    {
+        // Later: send to API / email / WhatsApp
+        Console.WriteLine(form);
+    }
+
+    class ContactFormModel
+    {
+        public string ParentName { get; set; } = "";
+        public string Phone { get; set; } = "";
+        public string ChildAge { get; set; } = "";
+        public DateTime? PartyDate { get; set; }
+        public string Message { get; set; } = "";
+    }
+}

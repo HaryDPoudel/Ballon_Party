@@ -1,0 +1,24 @@
+﻿.footer-section {
+    background-color: var(--color-bg-main);
+    padding: var(--space-lg) 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-brand {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+.footer-tagline {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+.footer-contact {
+    font-size: 0.95rem;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}

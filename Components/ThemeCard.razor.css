@@ -1,0 +1,35 @@
+﻿.theme-card {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+    .theme-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+.theme-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.theme-title {
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 0.5rem;
+}
+
+.theme-subtitle {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+.theme-cta {
+    border-radius: var(--radius-md);
+    padding: 10px 20px;
+    font-weight: var(--font-weight-medium);
+}

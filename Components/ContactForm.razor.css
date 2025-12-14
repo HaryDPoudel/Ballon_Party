@@ -1,0 +1,26 @@
+﻿.contact-section {
+    padding: var(--space-xl) 0;
+}
+
+.contact-card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: var(--space-lg);
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+}
+
+.contact-cta {
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-medium);
+}

@@ -1,0 +1,20 @@
+﻿<div class="theme-card card text-center h-100">
+    <img src="@ImageUrl" alt="@Title" class="card-img-top theme-image" />
+
+    <div class="card-body d-flex flex-column">
+        <h5 class="card-title theme-title">@Title</h5>
+
+        <p class="card-subtitle mb-3">@Subtitle</p>
+
+        <button class="btn btn-primary mt-auto theme-cta" @onclick="OnClick">
+            Show Me
+        </button>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = "Theme Title";
+    [Parameter] public string Subtitle { get; set; } = "Occasion / Age";
+    [Parameter] public string ImageUrl { get; set; } = "images/placeholder.jpg";
+    [Parameter] public EventCallback OnClick { get; set; }
+}
